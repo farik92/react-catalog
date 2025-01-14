@@ -1,52 +1,182 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
-
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
 }
-
+button {
+	cursor: pointer;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: #fff;
+}
+.col-6 {
+	flex-basis: 50%;
+}
 .App {
-  text-align: center;
+	text-align: center;
+	background: #282c34;
+	min-height: 100vh;
 }
-
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+	height: 40vmin;
+	pointer-events: none;
 }
-
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
 }
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+	background-color: #282c34;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+	border-bottom: 2px solid #444444;
+	padding: 10px;
+	gap: 15px;
 }
-
 .App-link {
-  color: #61dafb;
+	color: #61dafb;
+	text-decoration: none;
 }
-
+.App-catalog-items {
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+}
+.App-catalog-item {
+	flex-basis: 16.66666666666667%;
+	margin-bottom: 30px;
+}
+.App-catalog-item img {
+	max-width: 100%;
+}
+.App-catalog-item p {
+	margin: 0;
+}
+.App-catalog-item .product-name {
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 22px;
+}
+.App-product-details {
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+	padding: 30px 15px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.App-product-details .product-imgs {
+	position: relative;
+}
+.App-product-details .product-imgs .imgs-navs {
+	position: absolute;
+	top: calc(50% - 15px);
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.App-product-details .product-imgs .imgs-navs .nav-arrow {
+	background: transparent;
+	border: 0;
+	font-size: 40px;
+	font-weight: bold;
+	padding: 0 10px;
+}
+.App-product-details .product-imgs img {
+	max-width: 100%;
+	display: block;
+}
+.App-product-details .product-attrs {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 10px;
+	margin-bottom: 15px;
+}
+.App-product-details .product-attrs h3 {
+	display: block;
+	width: 100%;
+	margin: 0;
+}
+.App-product-details .product-attrs button {
+	background: #ffffff;
+	color: #000;
+	border: 1px solid #ffffff;
+	padding: 10px 15px;
+}
+.App-product-details .product-attrs .active {
+	background: #58dafb;
+	border: 1px solid #58dafb;
+}
+.App-product-details button:disabled, .App-product-details button[disabled] {
+	cursor: no-drop;
+	background: #d6d6d6;
+	color: #a1a1a1;
+	border-color: #d6d6d6;
+}
+.App-product-details .product-price {
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+}
+.App-product-details .add-to-cart {
+	margin-top: 20px;
+	background: #4CAF50;
+	border: 2px solid #4CAF50;
+	color: #fff;
+	font-size: 20px;
+	padding: 10px 20px;
+	border-radius: 4px;
+}
+.App-cart-items {
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+	flex-wrap: wrap;
+}
+.App-cart-item {
+	flex-basis: 16.66666666666667%;
+	margin-bottom: 30px;
+}
+.App-cart-item img {
+	max-width: 100%;
+}
+.App-cart-item p {
+	margin: 0;
+}
+.App-cart-item .product-name {
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 22px;
+}
+.App-cart-item .product-attr {
+	color: #fff;
+	font-size: 18px;
+}
+.App-cart-item .product-remove {
+	background: no-repeat;
+	border: 0;
+	color: #cf0000;
+	font-size: 16px;
+	padding: 0;
+	margin-top: 5px;
+}
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }

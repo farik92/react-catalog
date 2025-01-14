@@ -1,17 +1,12 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import './styles/index.css';
 
-import App from './App'
+const rootView = ReactDOM.createRoot(document.getElementById('root'));
 
-import './styles/index.css'
-
-const rootView = document.getElementById('root')
-
-if (rootView) {
-  ReactDOM.render(
+rootView.render(
     <React.StrictMode>
-      <App />
-    </React.StrictMode>,
-    rootView
-  )
-}
+        <App/>
+    </React.StrictMode>
+);
